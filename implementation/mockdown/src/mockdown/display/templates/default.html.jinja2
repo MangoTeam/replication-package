@@ -1,0 +1,65 @@
+{% macro view_box(view, color) -%}
+    <div class="md-view" data-name="{{ view.name }}" style="
+            --left: {{ view.rect[0] }}px;
+            --top: {{ view.rect[1] }}px;
+            --right: {{ view.rect[2] }}px;
+            --bottom: {{ view.rect[3] }}px;
+            --color: {{ color }};
+            "/>
+    {% for child in view.children %}
+        {{ view_box(child, color) }}
+    {% endfor %}
+    </div>
+{%- endmacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mockdown Display</title>
+    <style type="text/css" rel="stylesheet">
+        body {
+            margin: 0;
+        }
+
+        #underlay {
+            border: 0;
+        }
+
+        .md-view {
+            box-sizing: border-box;
+            content: attr(data-name);
+
+            position: fixed;
+            left: var(--left);
+            top: var(--top);
+            right: var(--right);
+            bottom: var(--bottom);
+
+            width: calc(var(--right) - var(--left));
+            height: calc(var(--bottom) - var(--top));
+
+            border: 1px solid var(--color);
+        }
+
+        .md-view:hover {
+
+        }
+    </style>
+</head>
+<body>
+    {% if origin %}
+    <iframe id="underlay" width="{{ root_width }}" height="{{ root_height }}" src="{{ origin }}">
+    </iframe>
+    {% endif %}
+
+    {% for example in examples %}
+        {{ view_box(example, colors[loop.index0]) }}
+    {% endfor %}
+
+    <script type="application/javascript">
+        {#const kiwi = {{ constraint_engine_js }};#}
+
+    </script>
+</body>
+</html>

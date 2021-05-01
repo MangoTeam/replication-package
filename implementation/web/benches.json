@@ -1,0 +1,849 @@
+{
+  "overview": {
+    "overview": {
+      "height": {
+        "low": 1500,
+        "high": 1500
+      },
+      "width": {
+        "low": 1300,
+        "high": 1680
+      }
+    },
+    "overview-header": {
+      "height": {
+        "low": 70,
+        "high": 70
+      },
+      "width": {
+        "low": 1304,
+        "high": 1675
+      }
+    },
+    "overview-hero": {
+      "height": {
+        "low": 400,
+        "high": 400
+      },
+      "width": {
+        "low": 1304,
+        "high": 1675
+      }
+    },
+    "overview-authors": {
+      "height": {
+        "low": 340.5,
+        "high": 340.5
+      },
+      "width": {
+        "low": 1184,
+        "high": 1555
+      }
+    },
+    "overview-author": {
+      "height": {
+        "low": 258,
+        "high": 258
+      },
+      "width": {
+        "low": 360.717,
+        "high": 483.15
+      }
+    }
+  },
+  "ieee": {
+    "ieeexplore": {
+      "height": {
+        "low": 1000,
+        "high": 1500
+      },
+      "width": {
+        "low": 1280,
+        "high": 1680
+      }
+    },
+    "ieee-navigation": {
+      "height": {
+        "low": 33.7,
+        "high": 33.7
+      },
+      "width": {
+        "low": 1294,
+        "high": 1675
+      }
+    },
+    "ieee-search": {
+      "height": {
+        "low": 410,
+        "high": 410
+      },
+      "width": {
+        "low": 1294,
+        "high": 1675
+      }
+    },
+    "ieee-authors": {
+      "height": {
+        "low": 450,
+        "high": 450
+      },
+      "width": {
+        "low": 1280,
+        "high": 1280
+      }
+    },
+    "ieee-articles": {
+      "height": {
+        "low": 474.2,
+        "high": 474.2
+      },
+      "width": {
+        "low": 1160,
+        "high": 1160
+      }
+    },
+    "ieee-news": {
+      "height": {
+        "low": 545,
+        "high": 545
+      },
+      "width": {
+        "low": 1280,
+        "high": 1280
+      }
+    },
+    "ieee-conferences": {
+      "height": {
+        "low": 558.1,
+        "high": 558.1
+      },
+      "width": {
+        "low": 1280,
+        "high": 1280
+      }
+    },
+    "ieee-footer": {
+      "height": {
+        "low": 288.4,
+        "high": 288.4
+      },
+      "width": {
+        "low": 1294,
+        "high": 1675
+      }
+    }
+  },
+  "ace": {
+    "ace": {
+      "height": {
+        "low": 1000,
+        "high": 2000
+      },
+      "width": {
+        "low": 800,
+        "high": 1200
+      }
+    },
+    "ace-sidebar": {
+      "height": {
+        "low": 1344.22,
+        "high": 1344.22
+      },
+      "width": {
+        "low": 280,
+        "high": 280
+      }
+    },
+    "ace-options": {
+      "height": {
+        "low": 1021.45,
+        "high": 1021.45
+      },
+      "width": {
+        "low": 280,
+        "high": 280
+      }
+    },
+    "ace-sidebar-logo": {
+      "height": {
+        "low": 100.75,
+        "high": 100.75
+      },
+      "width": {
+        "low": 280,
+        "high": 280
+      }
+    },
+    "ace-option-toggle": {
+      "height": {
+        "low": 17.85,
+        "high": 17.85
+      },
+      "width": {
+        "low": 266,
+        "high": 266
+      }
+    },
+    "ace-option-dropdown": {
+      "height": {
+        "low": 20.5,
+        "high": 20.5
+      },
+      "width": {
+        "low": 266,
+        "high": 266
+      }
+    },
+    "ace-sidebar-footer": {
+      "height": {
+        "low": 70,
+        "high": 70
+      },
+      "width": {
+        "low": 220,
+        "high": 220
+      }
+    },
+    "ace-editor": {
+      "height": {
+        "low": 191,
+        "high": 636
+      },
+      "width": {
+        "low": 334,
+        "high": 895
+      }
+    },
+    "ace-prompt": {
+      "height": {
+        "low": 16,
+        "high": 16
+      },
+      "width": {
+        "low": 334,
+        "high": 895
+      }
+    }
+  },
+
+  "icse": {
+    "icse": {
+      "height": {
+        "low": 3000,
+        "high": 3000
+      },
+      "width": {
+        "low": 800,
+        "high": 950
+      }
+    },
+    "icse-logo": {
+      "height": {
+        "low": 138,
+        "high": 138
+      },
+      "width": {
+        "low": 802,
+        "high": 949
+      }
+    },
+    "icse-navigation": {
+      "height": {
+        "low": 100,
+        "high": 100
+      },
+      "width": {
+        "low": 720,
+        "high": 720
+      }
+    },
+    "icse-photos": {
+      "height": {
+        "low": 360,
+        "high": 360
+      },
+      "width": {
+        "low": 802,
+        "high": 949
+      }
+    },
+    "icse-tracks": {
+      "height": {
+        "low": 595.85,
+        "high": 595.85
+      },
+      "width": {
+        "low": 220,
+        "high": 220
+      }
+    },
+    "icse-dates": {
+      "height": {
+        "low": 780.7,
+        "high": 780.7
+      },
+      "width": {
+        "low": 220,
+        "high": 220
+      }
+    },
+    "icse-news": {
+      "height": {
+        "low": 252.85,
+        "high": 252.85
+      },
+      "width": {
+        "low": 220,
+        "high": 220
+      }
+    },
+    "icse-content": {
+      "height": {
+        "low": 1625.5,
+        "high": 1625.5
+      },
+      "width": {
+        "low": 437.5,
+        "high": 437.5
+      }
+    },
+    "icse-footer": {
+      "height": {
+        "low": 559.667,
+        "high": 559.667
+      },
+      "width": {
+        "low": 750,
+        "high": 750
+      }
+    }
+  },
+  "fwt" : {
+    "description": "free website templates",
+    "fwt-main": {
+      "height": {
+        "low": 500,
+        "high": 1500
+      },
+      "width": {
+        "low": 1020,
+        "high": 1280
+      }
+    },
+    "fwt-posts-1": {
+      "height": {
+        "low": 500,
+        "high": 1500
+      },
+      "width": {
+        "low": 1020,
+        "high": 1280
+      }
+    },
+    "fwt-posts-3": {
+      "height": {
+        "low": 500,
+        "high": 1500
+      },
+      "width": {
+        "low": 1020,
+        "high": 1280
+      }
+    },
+    "fwt-posts-6": {
+      "height": {
+        "low": 500,
+        "high": 1500
+      },
+      "width": {
+        "low": 1020,
+        "high": 1280
+      }
+    },
+    "fwt-posts-9": {
+      "height": {
+        "low": 500,
+        "high": 1500
+      },
+      "width": {
+        "low": 1020,
+        "high": 1280
+      }
+    },
+    "fwt-posts-12": {
+      "height": {
+        "low": 500,
+        "high": 1500
+      },
+      "width": {
+        "low": 1020,
+        "high": 1280
+      }
+    },
+    "fwt-main-logo": {
+      "height": {
+        "low": 220,
+        "high": 220
+      },
+      "width": {
+        "low": 1023,
+        "high": 1274
+      }
+    },
+    "fwt-main-picker": {
+      "height": {
+        "low": 1812.8,
+        "high": 1812.8
+      },
+      "width": {
+        "low": 960,
+        "high": 960
+      }
+    },
+    "fwt-main-item": {
+      "height": {
+        "low": 409.2,
+        "high": 409.2
+      },
+      "width": {
+        "low": 276,
+        "high": 276
+      }
+    },
+    "fwt-main-footer": {
+      "height": {
+        "low": 45.3667,
+        "high": 45.3667
+      },
+      "width": {
+        "low": 1023,
+        "high": 1274
+      }
+    },
+    "fwt-yoga": {
+      "description": "yoga blog",
+      "width" : {
+        "low": 450,
+        "high": 850
+      },
+      "height" : {
+        "low" : 500,
+        "high" : 1500
+      }
+    },
+    "fwt-space": {
+      "height": {
+        "low": 500,
+        "high": 1500
+      },
+      "width": {
+        "low": 975,
+        "high": 1280
+      }
+    },
+    "fwt-space-header": {
+      "height": {
+        "low": 41,
+        "high": 41
+      },
+      "width": {
+        "low": 960,
+        "high": 960
+      }
+    },
+    "fwt-space-navigation": {
+      "height": {
+        "low": 60,
+        "high": 60
+      },
+      "width": {
+        "low": 940,
+        "high": 940
+      }
+    },
+    "fwt-space-logo": {
+      "height": {
+        "low": 707.6,
+        "high": 707.6
+      },
+      "width": {
+        "low": 940,
+        "high": 940
+      }
+    },
+    "fwt-space-featured": {
+      "height": {
+        "low": 156,
+        "high": 156
+      },
+      "width": {
+        "low": 940,
+        "high": 940
+      }
+    },
+    "fwt-space-vids": {
+      "height": {
+        "low": 334,
+        "high": 334
+      },
+      "width": {
+        "low": 460,
+        "high": 460
+      }
+    },
+    "fwt-space-blogs": {
+      "height": {
+        "low": 377.6,
+        "high": 377.6
+      },
+      "width": {
+        "low": 440,
+        "high": 440
+      }
+    },
+    "fwt-space-social": {
+      "height": {
+        "low": 84,
+        "high": 84
+      },
+      "width": {
+        "low": 984,
+        "high": 1252
+      }
+    },
+    "fwt-space-footer": {
+      "height": {
+        "low": 19.2,
+        "high": 19.2
+      },
+      "width": {
+        "low": 960,
+        "high": 960
+      }
+    },
+    "fwt-running": {
+      "height": {
+        "low": 2000,
+        "high": 2000
+      },
+      "width": {
+        "low": 975,
+        "high": 1280
+      }
+    },
+    "fwt-running-header": {
+      "height": {
+        "low": 41,
+        "high": 41
+      },
+      "width": {
+        "low": 984,
+        "high": 1252
+      }
+    },
+    "fwt-running-navigation": {
+      "height": {
+        "low": 227,
+        "high": 227
+      },
+      "width": {
+        "low": 984,
+        "high": 1252
+      }
+    },
+    "fwt-running-content": {
+      "height": {
+        "low": 1449,
+        "high": 1449
+      },
+      "width": {
+        "low": 984,
+        "high": 1252
+      }
+    },
+    "fwt-running-footer": {
+      "height": {
+        "low": 210,
+        "high": 210
+      },
+      "width": {
+        "low": 984,
+        "high": 1252
+      }
+    }
+  },
+
+  "personal": {
+    "description": "the authors' personal webpages",
+    "author": {
+      "height": {
+        "low": 2550,
+        "high": 2600
+      },
+      "width": {
+        "low": 825,
+        "high": 925
+      }
+    },
+    "author-navigation": {
+      "height": {
+        "low": 72.3667,
+        "high": 72.3667
+      },
+      "width": {
+        "low": 715,
+        "high": 799
+      }
+    },
+    "author-sidebar": {
+      "height": {
+        "low": 1652.1,
+        "high": 1652.1
+      },
+      "width": {
+        "low": 178.75,
+        "high": 180
+      }
+    },
+    "author-bio": {
+      "height": {
+        "low": 666.5,
+        "high": 666.5
+      },
+      "width": {
+        "low": 506.25,
+        "high": 510
+      }
+    },
+    "author-pubs": {
+      "height": {
+        "low": 876.2,
+        "high": 876.2
+      },
+      "width": {
+        "low": 506.25,
+        "high": 510
+      }
+    }
+  },
+
+  "ddg": {
+    "ddg": {
+      "height": {
+        "low": 2598.97,
+        "high": 2601
+      },
+      "width": {
+        "low": 710,
+        "high": 870
+      }
+    },
+    "ddg-header": {
+      "height": {
+        "low": 57.5333,
+        "high": 57.5333
+      },
+      "width": {
+        "low": 722,
+        "high": 862.6
+      }
+    },
+    "ddg-logo": {
+      "height": {
+        "low": 261.967,
+        "high": 261.967
+      },
+      "width": {
+        "low": 708,
+        "high": 848.6
+      }
+    },
+    "ddg-searchbar": {
+      "height": {
+        "low": 45.9667,
+        "high": 45.9667
+      },
+      "width": {
+        "low": 708,
+        "high": 848.6
+      }
+    },
+    "ddg-privacy": {
+      "height": {
+        "low": 204.2,
+        "high": 204.2
+      },
+      "width": {
+        "low": 631.083,
+        "high": 631.083
+      }
+    },
+    "ddg-minipages": {
+      "height": {
+        "low": 1106,
+        "high": 1106
+      },
+      "width": {
+        "low": 642,
+        "high": 782.6
+      }
+    }, 
+    "ddg-large-blurb": {
+      "height": {
+        "low": 244,
+        "high": 244
+      },
+      "width": {
+        "low": 577.6,
+        "high": 690.067
+      }
+    },
+    "ddg-faq": {
+      "height": {
+        "low": 376.767,
+        "high": 376.767
+      },
+      "width": {
+        "low": 722,
+        "high": 862.6
+      }
+    }
+  },
+
+  "hackernews": { 
+    "description": "the hackernews website",
+    "hn": {
+      "height": {
+        "low": 300,
+        "high": 1500
+      },
+      "width": {
+        "low": 800,
+        "high": 1200
+      }
+    },
+    "hn-posts-ten": {
+      "height": {
+        "low": 300,
+        "high": 1500
+      },
+      "width": {
+        "low": 800,
+        "high": 1200
+      }
+    },
+    "hn-header": {
+      "height": {
+        "low": 24,
+        "high": 24
+      },
+      "width": {
+        "low": 678.3,
+        "high": 1002.15
+      }
+    },
+    "hn-posts": {
+      "height": {
+        "low": 1091.5,
+        "high": 1091.5
+      },
+      "width": {
+        "low": 678.3,
+        "high": 1002.15
+      }
+    },
+    "hn-post": {
+      "height": {
+        "low": 19,
+        "high": 19
+      },
+      "width": {
+        "low": 617.767,
+        "high": 617.767
+      }
+    },
+    "hn-footer": {
+      "height": {
+        "low": 14,
+        "high": 14
+      },
+      "width": {
+        "low": 516,
+        "high": 516
+      }
+    },
+    "hn-search": {
+      "height": {
+        "low": 22,
+        "high": 22
+      },
+      "width": {
+        "low": 678.3,
+        "high": 1002.15
+      }
+    }
+  },
+
+  "synthetic": {
+    "description": "synthetic, toy benchmarks",
+    "2-boxes": {
+      "description": "2 boxes, lhs is fixed width and rhs is floating",
+      "width": {
+        "low": 450,
+        "high": 1000
+      },
+      "height": {
+        "low": 400,
+        "high": 1200
+      }
+    },
+
+    "centered": {
+      "description": "a single centered box with 80% width",
+      "width": {
+        "low": 700,
+        "high": 1200
+      },
+      "height": {
+        "low": 400,
+        "high": 1200
+      }
+    },
+
+    "3-boxes": {
+      "description": "3 boxes, left two are fixed width and rhs is floating",
+      "height": {
+        "low": 400,
+        "high": 1200
+      },
+      "width": {
+        "low": 450,
+        "high": 900
+      }
+    },
+    "2-2-boxes": {
+      "width": {
+        "low": 450,
+        "high": 1000
+      }, 
+      "height": {
+        "low": 400,
+        "high": 1200
+      }
+    },
+    "3-2-boxes": {
+      "description": "2 rows of 3 boxes, lhs is fixed width and rhs is floating",
+      "width": {
+        "low": 500,
+        "high": 1500
+      },
+      "height": {
+        "low": 400,
+        "high": 1200
+      }
+    }
+  }
+
+  
+  
+}

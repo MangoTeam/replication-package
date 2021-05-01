@@ -1,0 +1,42 @@
+{
+    "name": "auto-mock",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "browser": "rollup -c 2>/dev/null | pbcopy",
+        "mock": "node --es-module-specifier-resolution=node lib/NodeRunner.js",
+        "iui": "node --es-module-specifier-resolution=node lib/IUIRunner.js",
+        "hier": "node --es-module-specifier-resolution=node lib/HierBench.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@rollup/plugin-commonjs": "^11.0.1",
+        "@rollup/plugin-json": "^4.0.1",
+        "@types/node": "^12.12.24",
+        "@types/request-promise-native": "^1.0.16",
+        "@types/yargs": "^15.0.0",
+        "browserify": "^16.5.0",
+        "esm": "^3.2.25",
+        "flightlessbird.js": "file:flightlessbird.js",
+        "jquery": "^3.4.1",
+        "mockdown-client": "file:mockdown-client",
+        "open": "^6.4.0",
+        "pcg-random": "git+https://github.com/jsarracino/pcg-random.git",
+        "request": "^2.88.0",
+        "request-promise-native": "^1.0.8",
+        "tsc": "^1.20150623.0",
+        "typescript": "^3.7.4",
+        "yargs": "^15.1.0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^7.0.0",
+        "@rollup/plugin-typescript": "^2.1.0",
+        "@types/jquery": "^3.3.31",
+        "rollup": "^1.29.0"
+    }
+}
