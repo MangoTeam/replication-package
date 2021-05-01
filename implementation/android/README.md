@@ -1,4 +1,4 @@
-This evaluation assumes that `mockdown` and `auto-mock` are a level above this root (i.e. at `..`).
+This evaluation assumes that `mockdown` and `web` are a level above this root (i.e. at `..`).
 Also, it uses a `tmp/` directory for temporary files and saves the directory in version control
 with a `.gitignore` file.
 

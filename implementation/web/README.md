@@ -1,8 +1,11 @@
 # auto-mock
-Auto-Mock instruments an HTML page and compares a web browser's rendering
-of the layout to Mockdown's rendering of the layout.
+This tool instruments an HTML page and compares a web browser's rendering
+of the layout to Mockdown's rendering of the layout. It requires `npm` for package management
+and the TypeScript compiler (`tsc`) for compiling. 
 
-This works in two phases, *capturing* and *evaluation*.
+To install the tool, run `npm install` and install `tsc`.
+
+The tool works in two phases, *capturing* and *evaluation*.
 
 ## Capturing
 Auto-Mock uses a web browser to snapshot several examples of an HTML page's layout. During this phase Auto-Mock captures both training data and testing data.
@@ -13,9 +16,9 @@ Auto-Mock evaluates Mockdown on the captured layouts. First, Auto-Mock passes th
 ## Usage
 
 ### Capturing
-Capturing is complicated because I couldn't get Node to open up a browser window.
-So as a consequence, we'll use `npm run-script browser` to compile Auto-Mock into
-a standalone script and run this script from a browser console.
+To avoid subtelties of running a web browser by commmand line, 
+we compile and export a standalone script that is pasted into the 
+browser. This is done by running `npm run-script browser`.
 
 This script needs to be specialized to each benchmark. In particular edit `Bench.ts` in the following way:
   1. Make sure that the hook at the bottom of the file calls the correct benchmark function, i.e. one of the `runXXX` functions.
