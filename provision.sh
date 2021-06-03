@@ -1,20 +1,82 @@
+# Configuration:
+APT_PKGS="python3.8 python3-pip nodejs curl z3"
+ROOT_DIR="/vagrant"
+
+# Convenience:
 PYTHON="python3.8"
-APT_PKGS="python3.8 python3-pip nodejs z3"
+PIP="pip"
+PIPENV="pipenv"
+JS="node"
+NPM="npm"
+YARN="yarn"
+
+cd $ROOT_DIR
 
 echo "PROVISION [1/X]: Ensuring installed packages..."
 echo "-----------------------------------------------"
 
-apt-get -y update
-apt-get -y install $APT_PKGS
+# Ubuntu 18.04's default PPA has ancient Node.
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - 
 
-cd /vagrant
+sudo apt-get -y update
+sudo apt-get -y install $APT_PKGS
+
+# Package managers: bet you can't have just one.
+$PYTHON -m pip install --user pipenv
+sudo $NPM install --global yarn
 
 echo ""
-echo "PROVISION [2/X]: Installing mockdown dependencies..."
+echo "PROVISION [2/X]: Setting up mockdown..."
 echo "----------------------------------------------------"
 
-pushd implementation/mockdown
-$PYTHON -m pip install pipenv
-pipenv sync
+pushd ./implementation/mockdown
+$PIPENV sync
+$PIPENV run -- python setup.py install
 popd
 
+echo ""
+echo "PROVISION [3/X]: Setting up flightlessbird.js..."
+echo "----------------------------------------------------"
+
+pushd ./implementation/flightlessbird.js
+$YARN install
+$YARN link
+popd
+
+echo ""
+echo "PROVISION [4/X]: Setting up mockdown-client"
+echo "----------------------------------------------------"
+
+pushd ./implementation/mockdown-client
+$YARN link flightlessbird.js
+$YARN install
+$YARN link
+popd
+
+echo ""
+echo "PROVISION [5/X]: Setting up eval-web"
+echo "----------------------------------------------------"
+
+# TODO: HANDLE PYTHON DEPS PROPERLY, MISSING PIPFILE.LOCK
+# Best for John to add his from his computer where this was known to work?s
+
+pushd ./implementation/eval-web
+$YARN link flightlessbird.js
+$YARN link mockdown-client
+$YARN install
+$YARN link
+popd
+
+echo ""
+echo "PROVISION [6/X]: Setting up eval-android"
+echo "----------------------------------------------------"
+
+# TODO: HANDLE PYTHON DEPS PROPERLY, ADD PIPFILE?
+# e.g. dataclasses_json
+
+pushd ./implementation/eval-android
+$YARN link flightlessbird.js
+$YARN link mockdown-client
+$YARN install
+$YARN link
+popd
