@@ -1,7 +1,7 @@
 # fse-21-24-replication-package
 Replication package for FSE 2021 submission #24, titled Synthesis of Web Layouts from Examples.
 
-## About
+## About: Installation
 
 This replication package provides a pre-built VirtualBox image (included using [Git LFS](https://git-lfs.github.com)). Alternatively, [Vagrant](https://www.vagrantup.com) can be used to create and provision an equivalent image (the pre-built image having been created the same way).
 
@@ -33,7 +33,7 @@ To initialize the Vagrant environment, first, initialize this repository's submo
 
 > git submodule --init --recursive
 
-Ensure you have VirtualBox installed. Then, you may provision and start the Vagrant virtual image image by running:
+Ensure you have VirtualBox and Vagrant installed. Then, you may provision and start the Vagrant virtual image image by running:
 
 > vagrant up
 
@@ -48,6 +48,14 @@ To reproduce the included image, with VirtualBox running:
 Where `$VM_NAME` is the name of or UUID of your running VirtualBox VM, and `$OUTPUT_NAME` is the desired output location for the image. *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
 
 Further details, including instructions for running experiments, can be found below, in the **Package Structure** section.
+
+## Experiments: About
+
+what are all these experiments/layouts/etc folders? 
+
+## Experiments: Running
+
+...?
 
 ## Package Structure
 

@@ -1,3 +1,7 @@
+# Tell apt (and others) this is not an interactive shell.
+# e.g. don't try to access non-existent stdin.
+export DEBIAN_FRONTEND=noninteractive
+
 # Configuration:
 APT_PKGS="python3.8 python3-pip nodejs curl z3"
 ROOT_DIR="/vagrant"
