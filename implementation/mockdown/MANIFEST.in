@@ -1,4 +1,0 @@
-graft src
-include src/mockdown/py.typed
-include src/mockdown/instantiation/logic.pl
-recursive-include src/mockdown/display/templates/ *.jinja2 *.js *.css

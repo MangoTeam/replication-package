@@ -1,0 +1,6 @@
+[submodule "implementation/mockdown"]
+	path = implementation/mockdown
+	url = git@github.com:MangoTeam/mockdown.git
+[submodule "implementation/mockdown-client"]
+	path = implementation/mockdown-client
+	url = git@github.com:MangoTeam/mockdown-client.git

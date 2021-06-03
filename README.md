@@ -1,6 +1,56 @@
 # fse-21-24-replication-package
 Replication package for FSE 2021 submission #24, titled Synthesis of Web Layouts from Examples.
 
+## About
+
+This replication package provides a pre-built VirtualBox image (included using [Git LFS](https://git-lfs.github.com)). Alternatively, [Vagrant](https://www.vagrantup.com) can be used to create and provision an equivalent image (the pre-built image having been created the same way).
+
+After following these instructions (or simply booting the image) you should have a fully working copy of all of the following (all stored in `./implementation`): 
+
+- `mockdown`
+  - Our main tool, written in Python.
+- `mockdown-client`
+  - A JavaScript client for `mockdown`, intended for use in writing benchmarks, or integrating `mockdown` into web applications. Used by `auto-mock`.
+- `auto-mock` (placed in `implementation/web`)
+  - Evaluation for the web backendd (RQ1-RQ3).
+- `inferui-eval` (placed in `implementation/android`)
+  - Evaluation for the Android backend (RQ4).
+- `flightlessbird.js`
+  - A fork of the `kiwi.js` constraint solver, with some bug fixes and changes to faciliate adding multiple constraints at once. Used by `mockdown-client`.
+
+## Instructions: VirtualBox
+
+Simply load the provided `mockdown.vbox` into VirtualBox.
+
+The user credentials are:
+
+ - Username: `vagrant`
+ - Password: `vagrant`
+
+## Instructions: Vagrant
+
+To initialize the Vagrant environment, first, initialize this repository's submodules to acquire the source code for `mockdown`, `mockdown-client`, `inferui-eval`, `flightlessbird.js` and `auto-mock`, using:
+
+> git submodule --init --recursive
+
+Ensure you have VirtualBox installed. Then, you may provision and start the Vagrant virtual image image by running:
+
+> vagrant up
+
+Lastly, connect to the running virtual machine with:
+
+> vagrant ssh
+
+To reproduce the included image, with VirtualBox running:
+
+> vagrant package --base $VM_NAME --output $OUTPUT_NAME
+
+Where `$VM_NAME` is the name of or UUID of your running VirtualBox VM, and `$OUTPUT_NAME` is the desired output location for the image. *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
+
+Further details, including instructions for running experiments, can be found below, in the **Package Structure** section.
+
+## Package Structure
+
 This package is structured as follows.
 
 - `layouts/` contains json files that correspond to the scraped micro and macrobenchmarks. 
