@@ -4,8 +4,8 @@ ROOT_DIR="/vagrant"
 
 # Convenience:
 PYTHON="python3.8"
-PIP="pip"
-PIPENV="pipenv"
+PIP="python3.8 -m pip"
+PIPENV="python3.8 -m pipenv"
 JS="node"
 NPM="npm"
 YARN="yarn"
@@ -33,7 +33,7 @@ echo "PROVISION [2/X]: Setting up mockdown..."
 echo "----------------------------------------------------"
 
 pushd ./implementation/mockdown
-$PIPENV sync
+$PIPENV sync --dev
 $PIPENV run -- python setup.py install
 popd
 
@@ -78,8 +78,5 @@ echo "----------------------------------------------------"
 # e.g. dataclasses_json
 
 pushd ./implementation/eval-android
-$YARN link flightlessbird.js
-$YARN link mockdown-client
-$YARN install
-$YARN link
+$PIPENV sync --dev
 popd
