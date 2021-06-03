@@ -10,6 +10,9 @@ JS="node"
 NPM="npm"
 YARN="yarn"
 
+# TODO:
+# if STANDALONE:
+
 cd $ROOT_DIR
 
 echo "PROVISION [1/X]: Ensuring installed packages..."
