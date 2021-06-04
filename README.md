@@ -68,6 +68,8 @@ To reproduce the included image, with VirtualBox running:
 
 Where `$VM_NAME` is the name of or UUID of your running VirtualBox VM, and `$OUTPUT_NAME` is the desired output location for the image. *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
 
+By default, the vagrant image is set up such that `/vagrant` maps to the root package.
+
 Further details, including instructions for running experiments, can be found below, in the **Package Structure** section.
 
 ## Package Structure
@@ -105,6 +107,10 @@ We also provide raw data for all of these claims, as well as scripts for regener
 ## Artifact evaluation instructions
 
 We next provide detailed instructions for generating the above plots, as well as for rerunning our experiments. All of the commands below should be run starting from the root replication package directory of `replication-package/`. 
+
+If you are evaluating using the provided `Vagrantfile` via `vagrant up`, use `vagrant ssh` to connect to the image and then navigate to the evaluation directory by `cd /vagrant`. 
+
+Note: our `author` and `conference` benchmarks were previously named `john` and `icse`. We attempted to anonymize them as much as possible, but there might be some places where the benchmarks and output data refer to the original name. 
 
 ### Generating plots
 - RQ1: The raw data for `experiments/overall/macro.xlsx` and `experiments/overall/micro.xls` are in CSV format. We provide our original evaluation data in `micro-10.csv`, `micro-3.csv`, `macro-10.csv`, and `macro-3.csv` (all within `experiments/overall/`). To import this data into the Table 1 and Table 2 spreadsheets, directly copy-paste the CSV data into respective sheet. For example, to rebuild Table 2 with new data for `micro-3.csv`, copy the contents of `micro-3.csv` into the 3ex sheet of `micro.xls`. The new Table 2 is automatically updated in the Table sheet of `micro.xls`; notice that it contains an extra (extraneous) row for summary statistics about the hierarchical benchmarks.
@@ -213,17 +219,45 @@ We have included helper scripts for rerunning all of the experiments. In all cas
 
   > run_all_macro(examples=3)
 
-  WARNING: This will take a long time (TODO time on our machine). The output will be in TODO. Copy this output to the corresponding Excel spreadsheets in `experiments` i.e. `experiments/overall/micro.xlsx` and `experiments/overall/macro.xlsx`. 
+  WARNING: This will take a long time (on our testing VM, `run_all_macro()` takes roughly 3.5 hours to complete and `run_all_micro()` takes roughly 1.5 hours).
+  
+  Once finished, the command will say where output data is saved, for example: 
 
-  For `macro.xlsx`, put the data into the K1-AI11 cells of the macro 3 examples sheet. For `micro.xlsx`, put the data into the A1-J167 of the 3ex sheet. 
+
+```
+(eval-web) vagrant@vagrant:/vagrant/implementation/eval-web$ python3 -i evaluation.py
+>>> run_all_macro()
+starting macrobenchmarks
+worst case amount of work in seconds: 54000
+on 0: running macro personal
+on 0: Running bench personal, john
+on 0: Finished.
+on 1: running macro icse
+on 1: Running bench icse, icse
+on 1: Finished.
+on 1: invalid parse of result in eval/tmp/macro-examples-10-1900-01-01-15-32-27/bench-icse-0.log
+on 2: running macro hackernews
+on 2: Running bench hackernews, hn
+...
+on 29: Running bench ddg, ddg
+on 29: Finished.
+on 30: done! results printed to eval/tmp/macro-examples-10-1900-01-01-15-32-27/macro_results.csv
+```
+   In this case the output is being saved in `implementation/eval-web/eval/tmp/macro-examples-10-1900-01-01-15-32-27/macro_results.csv`. It is fine if there are some lines with invalid parses, this happens when the benchmark times out.
+
+   If all of the trials raise an invalid parse error, please check the log and contact us for troubleshooting.
+
+  For `macro.xlsx`, the output runs are combined in the same CSV file. Put this data into the K2-AI11 cells of the macro 3 examples sheet. Make sure to manually split the trials up into three separate tables (i.e. K2-R11 should contain data for one run of john through ddg, S2-Z11 contain data for a second run of john through ddg, etc).
+  
+   For `micro.xlsx`, put the data into the A1-J167 of the 3ex sheet. 
 
   Next, repeat the process for 10 training examples: 
 
   > python -i evaluation.py
 
-  > run_all_micro()
+  > run_all_micro(train_examples=10)
 
-  > run_all_macro()
+  > run_all_macro(examples=10)
 
   Again, this will take a long time. Copy the output into `micro.xlsx` and `macro.xlsx`; for macro, place the data into the macro_10_training_examples sheet, and for micro, place the data into the 10ex sheet.
 
@@ -244,7 +278,7 @@ We have included helper scripts for rerunning all of the experiments. In all cas
   The `run_all_micro` function takes an additional `loclearn` keyword argument.
   For this experiment, we must run 6 commands:
 
-  > run_all_micro(loclearn='bayesian')
+  > run_all_micro(loclearn='bayesian', train_examples=10)
 
   Copy the output of this command (which should be a CSV) to the CSV file `experiments/noise/10/nt-all.csv`.
 
@@ -252,7 +286,7 @@ We have included helper scripts for rerunning all of the experiments. In all cas
 
   Copy the output to `experiments/noise/3/nt-all.csv`.
 
-  > run_all_micro(loclearn='nt-none')
+  > run_all_micro(loclearn='nt-none', train_examples=10)
 
   Copy the output of this command to `experiments/noise/10/nt-none.csv`.
 
@@ -260,7 +294,7 @@ We have included helper scripts for rerunning all of the experiments. In all cas
 
   Copy the output to `experiments/noise/3/nt-none.csv`.
 
-  > run_all_micro(loclearn='simple')
+  > run_all_micro(loclearn='simple', train_examples=10)
 
   Copy the output to `experiments/noise/10/baseline.csv`.
 
