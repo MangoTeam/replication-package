@@ -1,5 +1,5 @@
 # FSE '21 Mockdown replication package
-This a replication package for FSE 2021 submission Synthesis of Web Layouts from Examples, hosted on Github at https://github.com/MangoTeam/replication-package.
+This a replication package for FSE 2021 submission Synthesis of Web Layouts from Examples, hosted on Github at [https://github.com/MangoTeam/replication-package](https://github.com/MangoTeam/replication-package).
 It contains our experimental data, scraped web layouts, our implementation as submodules,
 and a Vagrant provisioning script for replicating our experimental results.
 
