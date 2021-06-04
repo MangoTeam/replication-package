@@ -16,7 +16,7 @@ YARN="yarn"
 
 if [[ -n "$STANDALONE" ]]; then
     cp -r /vagrant ~/mockdown-replication-package
-    ROOT_DIR="~/mockdown-replication-package"
+    ROOT_DIR="~/mockdown-replicatsion-package"
 fi
 
 cd $ROOT_DIR
