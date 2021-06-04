@@ -3,7 +3,7 @@
 export DEBIAN_FRONTEND=noninteractive
 
 # Configuration:
-APT_PKGS="python3.8 python3-pip nodejs curl z3"
+APT_PKGS="python3.8 python3-pip nodejs curl z3 jq swip-prolog"
 ROOT_DIR="/vagrant"
 
 # Convenience:
@@ -49,7 +49,7 @@ echo "----------------------------------------------------"
 
 pushd ./implementation/flightlessbird.js
 $YARN install
-$yarn build
+$YARN build
 $YARN link
 popd
 
@@ -60,7 +60,7 @@ echo "----------------------------------------------------"
 pushd ./implementation/mockdown-client
 $YARN link flightlessbird.js
 $YARN install
-$yarn build
+$YARN build
 $YARN link
 popd
 
@@ -75,7 +75,7 @@ pushd ./implementation/eval-web
 $YARN link flightlessbird.js
 $YARN link mockdown-client
 $YARN install
-$yarn build
+$YARN build
 popd
 
 echo ""
