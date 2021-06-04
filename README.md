@@ -68,7 +68,7 @@ To reproduce the included image, with VirtualBox running:
 
 Where `$VM_NAME` is the name of or UUID of your running VirtualBox VM, and `$OUTPUT_NAME` is the desired output location for the image. *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
 
-By default, the vagrant image is set up such that `/vagrant` maps to the root package.
+By default, the vagrant image is set up such that `/vagrant` maps to the root replication package; and also, if using VirtualBox, the VM is configured with 8GB of memory and 2 CPU cores (see lines 8 and 9 of `Vagrantfile`). Please adjust to your own machine as needed.
 
 Further details, including instructions for running experiments, can be found below, in the **Package Structure** section.
 
