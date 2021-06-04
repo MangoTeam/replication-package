@@ -1,5 +1,5 @@
-# fse-21-24-replication-package
-This a replication package for FSE 2021 submission Synthesis of Web Layouts from Examples.
+# FSE '21 Mockdown replication package
+This a replication package for FSE 2021 submission Synthesis of Web Layouts from Examples, hosted on Github at https://github.com/MangoTeam/replication-package.
 It contains our experimental data, scraped web layouts, our implementation as submodules,
 and a Vagrant provisioning script for replicating our experimental results.
 
@@ -392,4 +392,4 @@ on 30: done! results printed to eval/tmp/macro-examples-10-1900-01-01-15-32-27/m
 There are two options for running Mockdown on a new benchmark.
 First, you can directly provide JSON that corresponds to several renderings of a layout. See `implementation/mockdown/tests/inferui/onetwo.json` for a simple example.
 
-Second, you can use `implementation/eval-web/` to scrape a web layout from a arbitrary web page. The process is rather involved and manual: see `implementation/eval-web/README.md` for detailed instructions and feel free to reach out to the authors for troubleshooting. Our layout scraper is tested on Mozilla FireFox and works for most websites, but might break on arbitrary web layouts. 
+Second, you can use `implementation/eval-web/` to scrape a web layout from a arbitrary web page. The process is rather involved and manual: see `implementation/eval-web/README.md` for detailed instructions and feel free to reach out to the authors for troubleshooting. Our layout scraper is tested on Mozilla Firefox and works for most websites, but might break on arbitrary web layouts. 
