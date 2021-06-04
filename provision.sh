@@ -14,8 +14,10 @@ JS="node"
 NPM="npm"
 YARN="yarn"
 
-# TODO:
-# if STANDALONE:
+if [[ -n "$STANDALONE" ]]; then
+    cp -r /vagrant ~/mockdown-replication-package
+    ROOT_DIR="~/mockdown-replication-package"
+fi
 
 cd $ROOT_DIR
 
@@ -47,6 +49,7 @@ echo "----------------------------------------------------"
 
 pushd ./implementation/flightlessbird.js
 $YARN install
+$yarn build
 $YARN link
 popd
 
@@ -57,6 +60,7 @@ echo "----------------------------------------------------"
 pushd ./implementation/mockdown-client
 $YARN link flightlessbird.js
 $YARN install
+$yarn build
 $YARN link
 popd
 
@@ -71,7 +75,7 @@ pushd ./implementation/eval-web
 $YARN link flightlessbird.js
 $YARN link mockdown-client
 $YARN install
-$YARN link
+$yarn build
 popd
 
 echo ""
