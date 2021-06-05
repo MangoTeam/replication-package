@@ -197,7 +197,16 @@ Note: our `author` and `conference` benchmarks were previously named `john` and 
 
 ### Running experiments
 
-We have included helper scripts for rerunning all of the experiments. In all cases the output data will be as a CSV file within `implementation/` and needs to be copied to the corresponding file within `experiments/`. 
+We have included helper scripts for rerunning each of the experiments. In all cases the output data will be as a CSV file within `implementation/` and needs to be copied to the corresponding file within `experiments/`. 
+
+CAVEATS and WARNING: there might be timing (and timeout) differences due to overhead
+of running from within a VM. 
+
+Also, the benchmark scripts take a long time to finish
+(each command takes 1-4 hours and there are 13 commands in total), so if you are going
+to run these experiments on a time budget, it would be best to start early and 
+set them running on a server or background VM.
+
 - RQ1: First change directory to `implementation/eval-web/` and start a pipenv shell: 
 
   > pushd implementation/eval-web
