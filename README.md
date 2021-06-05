@@ -10,6 +10,7 @@ This package requires `git`, VirtualBox, and [Vagrant](https://www.vagrantup.com
  your GitHub account.
 
 To start, clone this repository using: 
+
 > git clone git@github.com:MangoTeam/replication-package.git
 
 Next, initialize the submodules to acquire the source code for `mockdown`, `mockdown-client`, `inferui-eval`, `flightlessbird.js` and `auto-mock`, using:
