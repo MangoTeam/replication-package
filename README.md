@@ -44,7 +44,7 @@ After following these instructions you should have a fully working copy of all o
 
 ## Instructions: VirtualBox 
 
-Simply decompress the provided `mockdown-vm.tar.gz`, and open `box.ovf` with VirtualBox.
+Simply decompress `mockdown-vm.tar.gz`, available at `https://goto.ucsd.edu/~dylan/mockdown-vm.tar.gz` and open the included `box.ovf` with VirtualBox.
 
 The user credentials (if needed) are:
 
