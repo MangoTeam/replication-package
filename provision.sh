@@ -7,6 +7,7 @@ export DEBIAN_FRONTEND=noninteractive
 # Configuration:
 APT_PKGS="python3.8 python3-pip nodejs curl z3 jq swi-prolog"
 ROOT_DIR="/vagrant"
+SYM_DIR="/home/vagrant/replication-package"
 
 # Convenience:
 PYTHON="python3.8"
@@ -26,6 +27,7 @@ if [[ -n "$STANDALONE" ]]; then
 fi
 
 cd $ROOT_DIR
+ln -s $ROOT_DIR $SYM_DIR
 
 echo "PROVISION [1/X]: Ensuring installed packages..."
 echo "-----------------------------------------------"

@@ -41,11 +41,9 @@ After following these instructions you should have a fully working copy of all o
 
   + `android`, a CSV file for RQ4.  
 
-## Package Structure
-
 ## Instructions: VirtualBox 
 
-Simply load the provided `mockdown.vbox` into VirtualBox.
+Simply decompress the provided `mockdown-vm.tar.gz`, and open `box.ovf` with VirtualBox.
 
 The user credentials (if needed) are:
 
@@ -74,9 +72,9 @@ Note: if you have already created a non-standalone Vagrant VM, you will have to 
 
 Then, with VirtualBox running:
 
-> vagrant package --base $VM_NAME --output $OUTPUT_NAME
+> vagrant package --base $VM_NAME --output $OUTPUT_NAME.tar.gz
 
-Where `$VM_NAME` is the name or UUID of your running VirtualBox VM , and `$OUTPUT_NAME` is the desired output location for the image. *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
+Where `$VM_NAME` is the name or UUID of your running VirtualBox VM , and `$OUTPUT_NAME` is the desired output location for the compressed image (and other files). *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
 
 You can get `$VM_NAME` either from the VirtualBox GUI or `cat .vagrant/machines/default/virtualbox/id`.
 
