@@ -17,7 +17,7 @@ To start, clone this repository using:
 
 Next, initialize the submodules to acquire the source code for `mockdown`, `mockdown-client`, `inferui-eval`, `flightlessbird.js` and `auto-mock`, using:
 
-> git submodule --init --recursive
+> git submodule update --init --recursive
 
 If you get a permission error here from GitHub, it's probably because you need to add 
 an SSH key to your GitHub account.
