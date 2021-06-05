@@ -92,7 +92,7 @@ def plot_error_android():
   names = ["Avg RMS"]
   dtypes = [("Avg RMS", np.double)]
   csv = np.genfromtxt(
-     'android/android.csv', 
+     'android/android_results.csv', 
       delimiter=",", skip_header=1, names=names, usecols=3, 
       converters={3: converter}, 
       )
@@ -121,7 +121,7 @@ def plot_accuracy_android():
   names = ["Accuracy"]
   dtypes = [("Accuracy", np.double)]
   csv = np.genfromtxt(
-     'android/inferui-2.csv', 
+     'android/android_results.csv', 
       delimiter=",", skip_header=1, names=names, usecols=7, 
       converters={7: converter}, 
       )

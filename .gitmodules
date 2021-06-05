@@ -1,0 +1,15 @@
+[submodule "implementation/mockdown"]
+	path = implementation/mockdown
+	url = git@github.com:MangoTeam/mockdown.git
+[submodule "implementation/mockdown-client"]
+	path = implementation/mockdown-client
+	url = git@github.com:MangoTeam/mockdown-client.git
+[submodule "implementation/flightlessbird.js"]
+	path = implementation/flightlessbird.js
+	url = git@github.com:MangoTeam/flightlessbird.js.git
+[submodule "implementation/eval-web"]
+	path = implementation/eval-web
+	url = git@github.com:MangoTeam/auto-mock.git
+[submodule "implementation/eval-android"]
+	path = implementation/eval-android
+	url = git@github.com:MangoTeam/inferui-eval.git
