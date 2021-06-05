@@ -22,7 +22,7 @@ if [[ -n "$STANDALONE" ]]; then
     echo "---------------------------------------------------"
     mkdir /home/vagrant/mockdown-replication-package
     # Note: this is rsync to facilitate repeated debugging of provisioning...
-    rsync -a /vagrant/. /home/vagrant/mockdown-replication-package/
+    rsync -a /vagrant/ /home/vagrant/mockdown-replication-package/
     ROOT_DIR="/home/vagrant/mockdown-replication-package"
 fi
 
@@ -76,10 +76,8 @@ echo ""
 echo "PROVISION [5/X]: Setting up eval-web"
 echo "----------------------------------------------------"
 
-# TODO: HANDLE PYTHON DEPS PROPERLY, MISSING PIPFILE.LOCK
-# Best for John to add his from his computer where this was known to work?s
-
 pushd "$ROOT_DIR/implementation/eval-web"
+$PIPENV sync --dev
 $YARN link flightlessbird.js
 $YARN link mockdown-client
 $YARN install
@@ -89,9 +87,6 @@ popd
 echo ""
 echo "PROVISION [6/X]: Setting up eval-android"
 echo "----------------------------------------------------"
-
-# TODO: HANDLE PYTHON DEPS PROPERLY, ADD PIPFILE?
-# e.g. dataclasses_json
 
 pushd "$ROOT_DIR/implementation/eval-android"
 $PIPENV sync --dev

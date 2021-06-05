@@ -57,7 +57,7 @@ Contents are in ~/mockdown-replication-package.
 
 ## Instructions: Vagrant
 
-Ensure you have VirtualBox installed. Then, you may provision and start the Vagrant virtual image image by running:
+Ensure you have VirtualBox installed. Then, you may provision and start the Vagrant virtual image by running:
 
 > vagrant up
 
