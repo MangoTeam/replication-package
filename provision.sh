@@ -1,9 +1,11 @@
+#!/bin/bash
+
 # Tell apt (and others) this is not an interactive shell.
 # e.g. don't try to access non-existent stdin.
 export DEBIAN_FRONTEND=noninteractive
 
 # Configuration:
-APT_PKGS="python3.8 python3-pip nodejs curl z3 jq swip-prolog"
+APT_PKGS="python3.8 python3-pip nodejs curl z3 jq swi-prolog"
 ROOT_DIR="/vagrant"
 
 # Convenience:
@@ -15,8 +17,12 @@ NPM="npm"
 YARN="yarn"
 
 if [[ -n "$STANDALONE" ]]; then
-    cp -r /vagrant ~/mockdown-replication-package
-    ROOT_DIR="~/mockdown-replicatsion-package"
+    echo "PROVISION [0/X]: Provisioning in STANDALONE mode..."
+    echo "---------------------------------------------------"
+    mkdir /home/vagrant/mockdown-replication-package
+    # Note: this is rsync to facilitate repeated debugging of provisioning...
+    rsync -a /vagrant/. /home/vagrant/mockdown-replication-package/
+    ROOT_DIR="/home/vagrant/mockdown-replication-package"
 fi
 
 cd $ROOT_DIR
@@ -38,7 +44,7 @@ echo ""
 echo "PROVISION [2/X]: Setting up mockdown..."
 echo "----------------------------------------------------"
 
-pushd ./implementation/mockdown
+pushd "$ROOT_DIR/implementation/mockdown"
 $PIPENV sync --dev
 $PIPENV run -- python setup.py install
 popd
@@ -47,7 +53,7 @@ echo ""
 echo "PROVISION [3/X]: Setting up flightlessbird.js..."
 echo "----------------------------------------------------"
 
-pushd ./implementation/flightlessbird.js
+pushd "$ROOT_DIR/implementation/flightlessbird.js"
 $YARN install
 $YARN build
 $YARN link
@@ -57,7 +63,7 @@ echo ""
 echo "PROVISION [4/X]: Setting up mockdown-client"
 echo "----------------------------------------------------"
 
-pushd ./implementation/mockdown-client
+pushd "$ROOT_DIR/implementation/mockdown-client"
 $YARN link flightlessbird.js
 $YARN install
 $YARN build
@@ -71,7 +77,7 @@ echo "----------------------------------------------------"
 # TODO: HANDLE PYTHON DEPS PROPERLY, MISSING PIPFILE.LOCK
 # Best for John to add his from his computer where this was known to work?s
 
-pushd ./implementation/eval-web
+pushd "$ROOT_DIR/implementation/eval-web"
 $YARN link flightlessbird.js
 $YARN link mockdown-client
 $YARN install
@@ -85,6 +91,6 @@ echo "----------------------------------------------------"
 # TODO: HANDLE PYTHON DEPS PROPERLY, ADD PIPFILE?
 # e.g. dataclasses_json
 
-pushd ./implementation/eval-android
+pushd "$ROOT_DIR/implementation/eval-android"
 $PIPENV sync --dev
 popd

@@ -43,14 +43,16 @@ After following these instructions you should have a fully working copy of all o
 
 ## Package Structure
 
-## Instructions: VirtualBox (TODO)
+## Instructions: VirtualBox 
 
 Simply load the provided `mockdown.vbox` into VirtualBox.
 
-The user credentials are:
+The user credentials (if needed) are:
 
  - Username: `vagrant`
  - Password: `vagrant`
+
+Contents are in ~/mockdown-replication-package.
 
 ## Instructions: Vagrant
 
@@ -62,11 +64,21 @@ Lastly, connect to the running virtual machine with:
 
 > vagrant ssh
 
-To reproduce the included image, with VirtualBox running:
+## Instructions: Vagrant + Standalone Box
+
+To reproduce the included image, first:
+
+> STANDALONE=1 vagrant up
+
+Note: if you have already created a non-standalone Vagrant VM, you will have to `vagrant destroy` it first, or instead run `STANDALONE=1 vagrant provision` on an existing image.
+
+Then, with VirtualBox running:
 
 > vagrant package --base $VM_NAME --output $OUTPUT_NAME
 
-Where `$VM_NAME` is the name of or UUID of your running VirtualBox VM, and `$OUTPUT_NAME` is the desired output location for the image. *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
+Where `$VM_NAME` is the name or UUID of your running VirtualBox VM , and `$OUTPUT_NAME` is the desired output location for the image. *Note: this image does *not* depend on Vagrant, and is an "as-is" dump of the provisioned and running VM.*
+
+You can get `$VM_NAME` either from the VirtualBox GUI or `cat .vagrant/machines/default/virtualbox/id`.
 
 By default, the vagrant image is set up such that `/vagrant` maps to the root replication package; and also, if using VirtualBox, the VM is configured with 8GB of memory and 2 CPU cores (see lines 8 and 9 of `Vagrantfile`). Please adjust to your own machine as needed.
 
