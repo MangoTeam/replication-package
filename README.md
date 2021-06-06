@@ -7,9 +7,9 @@ and a Vagrant provisioning script for replicating our experimental results.
 
 ## Installation instructions
 
-This package requires `git`, VirtualBox, and [Vagrant](https://www.vagrantup.com). Note:
- we use git by SSH to fetch the submodules, so you will need to add an SSH key to 
- your GitHub account.
+This package requires `git`, VirtualBox, and [Vagrant](https://www.vagrantup.com). 
+
+**Note:** we use git by SSH to fetch the submodules, so you will need to add an SSH key to your GitHub account.
 
 To start, clone this repository using: 
 
@@ -19,9 +19,7 @@ Next, initialize the submodules to acquire the source code for `mockdown`, `mock
 
 > git submodule update --init --recursive
 
-If you get a permission error here from GitHub, it's probably because you need to add 
-an SSH key to your GitHub account.
-
+If you get a permission error here from GitHub, it's probably because you need to add an SSH key to your GitHub account.
 
 ## Package structure
 
@@ -82,6 +80,12 @@ Where `$VM_NAME` is the name or UUID of your running VirtualBox VM , and `$OUTPU
 You can get `$VM_NAME` either from the VirtualBox GUI or `cat .vagrant/machines/default/virtualbox/id`.
 
 By default, the vagrant image is set up such that `/vagrant` maps to the root replication package; and also, if using VirtualBox, the VM is configured with 8GB of memory and 2 CPU cores (see lines 8 and 9 of `Vagrantfile`). Please adjust to your own machine as needed.
+
+## Instructions: A Note on VM Performance
+
+Note that replicating our results in a virtual machine, either through Vagrant, or with the provided VirtualBox image, will be slower than running outside of a VM. We evaluated our results on a machine with a quad-core 4ghz Intel i-6700k processor with 32GB of RAM. 
+
+If you wish to, the included `provision.sh` shows which packages must be installed, and how to build/link each included component. On an Ubuntu or Debian system, it is sufficient to change $ROOT_DIR to the parent folder of this README.
 
 Further details, including instructions for running experiments, can be found below, in the **Package Structure** section.
 
