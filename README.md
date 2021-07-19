@@ -3,11 +3,21 @@
 # FSE '21 Mockdown replication package
 This a replication package for FSE 2021 submission Synthesis of Web Layouts from Examples, hosted on Github at [https://github.com/MangoTeam/replication-package](https://github.com/MangoTeam/replication-package).
 It contains our experimental data, scraped web layouts, our implementation as submodules,
-and a Vagrant provisioning script for replicating our experimental results.s
+and a Vagrant provisioning script for replicating our experimental results.
+
+## Important Note:
+
+This package contains the necessary artifacts for installing Mockdown, as well as for building a virtual machine image in which our experiements may be replicated.
+
+**A copy of the VM image this repository builds may be found at https://zenodo.org/record/5112648.**
+
+If for any reason the instructions for installation/replication (contained in `INSTALL.md`) fail, please boot this image in VirtualBox. It may be a bit slower than running natively (see the note on performance in `INSTALL.md`) but it will be sufficient to verify that the tool does work.
+
+If you wish to install the tool natively (without a VM) please follow along with `provision.sh`, subsituting the initial package management commands with those appropriate for your system (see `REQUIREMENTS.md` for more details). The individual subpackages in this replication package include pinned (Python/JS) dependencies in the form of lockfiles to make this as simple as possible.
 
 ## Package Structure (for the purpose of evaluation)
 
-> Note: an alternative description of package structure is listed in `INSTALL.md`, which provides more details on the contents of the `implementation` directory, and is intended for those who wish to install the packages directly rather than just use the provided VM/Vagrantfile.
+Note: an alternative (and more detailed) description of package structure is listed in `INSTALL.md`, which provides more details on the contents of the `implementation` directory, and is intended for those who wish to install the packages directly rather than just use the provided VM/Vagrantfile.
 
 This package is structured as follows.
 
