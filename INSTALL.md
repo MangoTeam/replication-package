@@ -56,7 +56,7 @@ Lastly, connect to the running virtual machine with:
 
 > vagrant ssh
 
-Note: if there are any issues with running `vagrant up`, such as `vm:* A box must be specified."`, check that you are using Vagrant `>=2` and VirtualBox `>=6.1`. s
+Note: if there are any issues with running `vagrant up`, such as `vm:* A box must be specified."`, check that you are using Vagrant `>=2` and VirtualBox `>=6.1`.
 
 ## Instructions: Vagrant + Standalone Box
 

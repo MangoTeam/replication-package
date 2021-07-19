@@ -15,7 +15,7 @@ This package is structured as follows.
 
 - `implementation/` contains the source code, as well as runner scripts for regenerating the raw data for the experiments.
   + Our main tool is in `implementation/mockdown/` and has installation instructions its own `README.md` file.
-  Several example inputs are in `tests/`, for example `tests/inferui/onetwo.json`.
+  Several example inputs are in `tests/`, for exwample `tests/inferui/onetwo.json`.
   Mockdown can be run by command line or as a server on the localhost. Of these, command line is easiest to use;
   for usage, run `mockdown run --help` from a pipenv shell within the Mockdown directory.
 
